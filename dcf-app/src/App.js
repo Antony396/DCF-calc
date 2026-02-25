@@ -54,8 +54,10 @@ export default function DCFCalculator() {
         cash_equivalent: parseFloat(cash),
         total_debt: parseFloat(debt)
       };
+      
+     
 
-      const response = await fetch("http://127.0.0.1:8000/dcf", {
+      const response = await fetch("https://dcf-calc.onrender.com/dcf", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
